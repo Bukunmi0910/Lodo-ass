@@ -1,0 +1,214 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* PlayerPiece.css */
+.player-piece {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes the piece a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #333;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+/* Add hover effect if needed */
+.player-piece:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+
+/* Dice.css */
+.dice {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.dice-face {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-face::before,
+.dice-face::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.dice-1 .dice-face::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-2 .dice-face::before {
+  top: 10%;
+  left: 10%;
+}
+.dice-2 .dice-face::after {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-3 .dice-face::before {
+  top: 10%;
+  left: 10%;
+}
+.dice-3 .dice-face::after {
+  bottom: 10%;
+  right: 10%;
+}
+.dice-3::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-4 .dice-face::before {
+  top: 10%;
+  left: 10%;
+}
+.dice-4 .dice-face::after {
+  bottom: 10%;
+  right: 10%;
+}
+.dice-4::before {
+  top: 10%;
+  right: 10%;
+}
+.dice-4::after {
+  bottom: 10%;
+  left: 10%;
+}
+
+.dice-5 .dice-face::before {
+  top: 10%;
+  left: 10%;
+}
+.dice-5 .dice-face::after {
+  bottom: 10%;
+  right: 10%;
+}
+.dice-5::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dice-5::after {
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+}
+
+.dice-6 .dice-face::before {
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+}
+
+.modal-button{
+  border: none;
+  background-color: rgb(16, 191, 16);
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-content1{
+  color: #fff;
+  background-color: chocolate;  
+  border-radius: 20px;
+  width: 200px;
+}
+.modal-head{
+ color: chocolate; 
+}
