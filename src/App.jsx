@@ -1,6 +1,5 @@
 
 import './App.css'
-import Game from './Game';
 import React, { useState } from 'react';
 import Modal from './modal';
 
